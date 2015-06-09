@@ -16,7 +16,7 @@ function products_init(){
 		'not_found'				=> __('No product found', 'hm'),
 		'not_found_in trash' 	=> __('No product found in the trash', 'hm'),
 		'parent_item_colon'		=> '',
-		'menu_name'				=> __('product', 'hm')
+		'menu_name'				=> __('Products', 'hm')
 		);
 
 	$args = array(
