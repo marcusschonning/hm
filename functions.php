@@ -1,5 +1,8 @@
 <?php
 
+require 'library/cpt-products.php';
+
+
 /**********************************************
  **********************************************
  * Enqueue scripts and styles and media       *
@@ -13,7 +16,9 @@ function hm_scripts() {
 	wp_enqueue_script('jquery', '//code.jquery.com/jquery-1.11.2.min.js', array(), '', true);
 	wp_enqueue_script('script', get_template_directory_uri() . '/build/js/main.min.js', array(), '', true);
 }
+
 add_action( 'wp_enqueue_scripts', 'hm_scripts' );
 
+add_theme_support( 'post-thumbnails' );
 
 ?>
