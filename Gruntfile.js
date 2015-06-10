@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					src: 'src/js/*.js',
-					dest: 'js/',
+					dest: 'build/js/',
 					flatten: true,
 					rename: function(destBase, destPath){
 						return destBase + destPath.replace(
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: ['src/js/*.js'],
-				tasks: ['jshint', 'uglify']
+				tasks: [/*'jshint',*/ 'uglify']
 			}
 		}
 	});
