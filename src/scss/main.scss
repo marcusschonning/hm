@@ -1,4 +1,50 @@
 @import "normalize";
-body{
-	background: darkorange;
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.main-content {
+	height: 80%;
+	position: relative;
+	background: #CECECE;
+
+	.man, .woman {
+		width: 40%;
+		float: left;
+		margin: 0;
+		padding: 0;
+
+		h1 {
+			margin: 0;
+			padding: 10px;
+			text-align: center;
+		}
+	}
+	.man {
+		background: url('../../img/hm_man_transparent.png') no-repeat center;
+		background-size: 500px 400px;
+		height: 100%;
+
+	}
+	.woman {
+		background: url('../../img/hm_woman_transparent.png') no-repeat center;
+		background-size: 500px 400px;
+		height: 100%;
+
+	}
+
+	.bottle {
+		height: 100%;
+		width: 20%;
+		margin: 0;
+		padding: 0;
+		float: left;
+		p {
+			text-align: center;
+		}
+	}
 }
