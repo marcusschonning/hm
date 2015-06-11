@@ -20,16 +20,17 @@ jQuery(function($){
 		
 	var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 
-	if(false){
+	if(true){
 		var json_string = JSON.stringify(obj, null, 2);
 		$.post(
 			url,
 			{ 'json_obj': json_string },
 			function(res){
 				console.log(res);
+				var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
 				$('.qr').html('').qrcode({
 					size: 200,
-					text: 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart='+res
+					text: link
 				});
 			}
 		);
