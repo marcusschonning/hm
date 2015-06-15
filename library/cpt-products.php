@@ -65,11 +65,54 @@ function my_product_taxonomies() {
 	register_taxonomy('product_categories', 'products', $args);
 }
 
+function product_meta_box() {
+	add_meta_box( 
+		'product_meta_box', // id
+		__( 'Product Meta', // title
+		'myplugin_textdomain' ),
+		'product_meta_box_content', //callback
+		'products', //page
+		'side', //context
+		'high' //priority
+	);
+}
+
+function product_meta_box_content( $post ) {
+	$old = get_post_meta($post->ID, "product_price", true);
+	$old2 = get_post_meta($post->ID, "product_size", true);
+	$old3 = get_post_meta($post->ID, "product_color", true);
+
+	wp_nonce_field( plugin_basename( __FILE__ ), 'product_meta_box_content_nounce' );
+	?>
+	<label for="product_price"><?php _e('Enter the price of the product'); ?></label>
+	<input type="number" id="product_price" name="product_price" value="<?php echo $old ?>"/> <br><br>
+
+	<label><?php _e('Enter the size of the product'); ?></label><br>
+	<input type="radio" id="product_size" name="product_size" value="onesize" <?php if($old2 === 'onesize') echo 'checked' ?>/>Onesize<br>
+	<input type="radio" id="product_size" name="product_size" value="multiple" <?php if($old2 === 'multiple') echo 'checked' ?>/>Multiple<br><br>
+
+	<label for="product_color"><?php _e('Enter the colors of the product'); ?></label><br>
+	<input type="checkbox" id="product_color" name="product_color" value="red"/>RÖD!<br>
+	<input type="checkbox" id="product_color" name="product_color" value="blue"/>Blå<br>
+	<input type="checkbox" id="product_color" name="product_color" value="green"/>GRÖN<br>
+	<input type="checkbox" id="product_color" name="product_color" value="yellow"/>GUL<br>
+	<input type="checkbox" id="product_color" name="product_color" value="white"/>VI!!!t<br>
+	<input type="checkbox" id="product_color" name="product_color" value="black"/>Scvart<br>
+	<input type="checkbox" id="product_color" name="product_color" value="gray"/>Grå...<br>
+	<input type="checkbox" id="product_color" name="product_color" value="orange"/>Orange<br>
+
+	<?php
+}
+
+function product_meta_box_save($post_id) {   
+	update_post_meta($post_id, "product_price", sanitize_text_field($_POST["product_price"]));
+	update_post_meta($post_id, "product_size", sanitize_text_field($_POST["product_size"]));
+}
 
 
+add_action( 'add_meta_boxes', 'product_meta_box' );
+add_action( 'save_post', 'product_meta_box_save' );
 add_action('init', 'my_product_taxonomies');
-
-
 add_action('init', 'products_init');
 
 
