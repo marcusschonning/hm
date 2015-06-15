@@ -1,26 +1,28 @@
 jQuery(function($){
-	var obj = {
-		'products': [
+	 
+		var products = [
 			{
-				'id': 2,
-				'size': 3,
-				'color': 2
+				'id': 656,
+				'size': 666,
+				'color': 666
 			},
 			{
-				'id': 34,
-				'size': 3,
-				'color': 6
+				'id': 3,
+				'size': 5,
+				'color': 9
 			},
 			{
-				'id': 17,
-				'color': 2
+				'id': 15,
+				'color': 1
 			}
-		]
-	};
+		];
+
+		
 		
 	var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 
 	if(true){
+		var obj = { 'products':products };
 		var json_string = JSON.stringify(obj, null, 2);
 		$.post(
 			url,
