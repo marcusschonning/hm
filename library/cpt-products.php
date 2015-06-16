@@ -78,6 +78,7 @@ function product_meta_box() {
 }
 
 function product_meta_box_content( $post ) {
+
 	$old = get_post_meta($post->ID, "product_price", true);
 	$old2 = get_post_meta($post->ID, "product_size", true);
 	$old3 = get_post_meta($post->ID, "product_color", true);
@@ -92,14 +93,23 @@ function product_meta_box_content( $post ) {
 	<input type="radio" id="product_size" name="product_size" value="multiple" <?php if($old2 === 'multiple') echo 'checked' ?>/>Multiple<br><br>
 
 	<label for="product_color"><?php _e('Enter the colors of the product'); ?></label><br>
-	<input type="checkbox" id="product_color" name="product_color" value="red"/>RÖD!<br>
-	<input type="checkbox" id="product_color" name="product_color" value="blue"/>Blå<br>
-	<input type="checkbox" id="product_color" name="product_color" value="green"/>GRÖN<br>
-	<input type="checkbox" id="product_color" name="product_color" value="yellow"/>GUL<br>
-	<input type="checkbox" id="product_color" name="product_color" value="white"/>VI!!!t<br>
-	<input type="checkbox" id="product_color" name="product_color" value="black"/>Scvart<br>
-	<input type="checkbox" id="product_color" name="product_color" value="gray"/>Grå...<br>
-	<input type="checkbox" id="product_color" name="product_color" value="orange"/>Orange<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="red" <?php if(!empty($old3) && in_array('red', $old3)) echo 'checked' ?> />RÖD!<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="blue" <?php if(!empty($old3) && in_array('blue', $old3)) echo 'checked' ?> />Blå<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="green" <?php if(!empty($old3) && in_array('green', $old3)) echo 'checked' ?> />GRÖN<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="yellow" <?php if(!empty($old3) && in_array('yellow', $old3)) echo 'checked' ?> />GUL<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="white" <?php if(!empty($old3) && in_array('white', $old3)) echo 'checked' ?> />VI!!!t<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="black" <?php if(!empty($old3) && in_array('black', $old3)) echo 'checked' ?> />Scvart<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="gray" <?php if(!empty($old3) && in_array('gray', $old3)) echo 'checked' ?> />Grå...<br>
+	<input type="checkbox" id="product_color" name="product_color[]" value="orange" <?php if(!empty($old3) && in_array('orange', $old3)) echo 'checked' ?> />Orange<br>
+
+	<?php
+	if(!empty($old3)) {
+		foreach($old3 as $check) {
+	    	echo $check;
+		}
+	}
+	?>
+
 
 	<?php
 }
@@ -107,6 +117,7 @@ function product_meta_box_content( $post ) {
 function product_meta_box_save($post_id) {   
 	update_post_meta($post_id, "product_price", sanitize_text_field($_POST["product_price"]));
 	update_post_meta($post_id, "product_size", sanitize_text_field($_POST["product_size"]));
+	update_post_meta($post_id, "product_color", $_POST["product_color"]);
 }
 
 

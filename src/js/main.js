@@ -21,7 +21,7 @@ jQuery(function($){
 		
 	var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 
-	if(true){
+	if(false){
 		var obj = { 'products':products };
 		var json_string = JSON.stringify(obj, null, 2);
 		$.post(
