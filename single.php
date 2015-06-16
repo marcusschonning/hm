@@ -13,6 +13,14 @@ if ( have_posts() ) {
 
 		echo get_post_meta($post->ID, "product_price", true) . ":-" ."<br />";
 
+		print_r(get_post_meta($post->ID, "product_color", true));
+
+		$colors = get_post_meta($post->ID, "product_color", true);
+
+		foreach ($variable as $key => $value) {
+			# code...
+		}
+
 
 		if (get_post_meta($post->ID, "product_size", true) === "onesize") {
 			echo "Onesize";
@@ -28,7 +36,16 @@ if ( have_posts() ) {
 
 
 		}
+		if (has_post_thumbnail( $post->ID )) {
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+			echo $image[0];
+		}
 
+		$media = get_attached_media( 'image' );
+
+		foreach ($media as $value) {
+			 echo wp_get_attachment_url( $value->ID );
+		}
 
 		
 	} // end while
