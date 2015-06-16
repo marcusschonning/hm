@@ -7,7 +7,7 @@ if ( have_posts() ) {
 		//
 		// Post Content here
 		//
-		echo "page-product.php!";
+		echo "archive-products.php!";
 	} // end while
 } // end if
 

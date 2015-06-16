@@ -28,7 +28,7 @@ function products_init(){
 										'editor',
 										'thumbnail',
 										'comments' ),
-		'rewrite'            => array( 'slug' => 'products-archive' ),
+		'rewrite'            => array( 'slug' => 'products' ),
 		'has_archive'		=> true,
 		'capability_type' 	=> 'post',
 		'menu_icon'			=> 'dashicons-exerpt-view'
