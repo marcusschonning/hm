@@ -74,7 +74,8 @@ module.exports = function(grunt) {
 					window: true,
 					setInterval: true,
 					clearInterval: true,
-					setTimeout: true
+					setTimeout: true,
+					localStorage: true
 				}
 			}
 		},

@@ -1,27 +1,47 @@
 jQuery(function($){
-	 
-		var products = [
-			{
-				'id': 656,
-				'size': 666,
-				'color': 666
-			},
-			{
-				'id': 3,
-				'size': 5,
-				'color': 9
-			},
-			{
-				'id': 15,
-				'color': 1
-			}
-		];
+	var products = [];
+
+	if($('body').hasClass('post-type-archive-products')){
+		$('.product-link').on('click', function(e) {
+			e.preventDefault();
+			var url = $(this).attr('href');
+			$.ajax({
+				url: url
+			}).done(function(res) {
+				$('.content').html( res );
+			});
+		});
+
+		$('.content').delegate('.close', 'click', function(){
+			$('.content').html('');
+		});
+
+		$('.content').delegate('.add-to-cart', 'click', function(){
+
+			var id = parseInt($(this).siblings('.title').attr('product-id'));
+			console.log(id);
+			
+			var price = parseInt($(this).siblings('.price').text());
+			console.log(price);
+
+			//var color = ...
+
+			var size = $(this).siblings('input[type="radio"]:checked').val();
+			console.log(size);
+			
+
+			localStorage.setItem('products', products);
+		});
+	}
+
+	
+
 
 		
 		
 	var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 
-	if(false){
+	if($('body').hasClass('page-template-template-checkout')){
 		var obj = { 'products':products };
 		var json_string = JSON.stringify(obj, null, 2);
 		$.post(
