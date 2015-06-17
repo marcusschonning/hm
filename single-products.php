@@ -41,9 +41,9 @@ if ( have_posts() ) {
 		}
 		$media = get_attached_media( 'image' );
 		foreach ($media as $value) {
-			 ?>
+			?>
 				<img src="<?php echo wp_get_attachment_url( $value->ID ); ?>" width="200">
-			 <?php
+			<?php
 		}
 
 		?>
