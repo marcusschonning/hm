@@ -24,9 +24,10 @@ jQuery(function($){
 			var price = parseInt($(this).siblings('.price').text());
 			console.log(price);
 
-			//var color = ...
+			var color = $(this).siblings('.colors').children('input[type="radio"][name="color"]:checked').val();
+			console.log(color);
 
-			var size = $(this).siblings('input[type="radio"]:checked').val();
+			var size = $(this).siblings('.sizes').children('input[type="radio"][name="size"]:checked').val();
 			console.log(size);
 			
 
