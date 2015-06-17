@@ -30,6 +30,13 @@ jQuery(function($){
 			var size = $(this).siblings('.sizes').children('input[type="radio"][name="size"]:checked').val();
 			console.log(size);
 			
+			products.push(JSON.stringify({id:id, price:price, color:color, size:size})
+			);
+
+
+
+			console.log(products);
+			
 
 			localStorage.setItem('products', products);
 		});
@@ -43,8 +50,8 @@ jQuery(function($){
 	var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 
 	if($('body').hasClass('page-template-template-checkout')){
-		var obj = { 'products':products };
-		var json_string = JSON.stringify(obj, null, 2);
+		var obj = { 'products':localStorage.getItem('products') };
+		var json_string = JSON.stringify(obj);
 		$.post(
 			url,
 			{ 'json_obj': json_string },

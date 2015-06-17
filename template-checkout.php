@@ -6,6 +6,6 @@
 <?php echo 'template-checkout.php'; ?>
 <?php get_header(); ?>
 
-	<div class="qr"></div>
+	<div class="qr" style="margin: 10px;"></div>
 
 <?php get_footer(); ?>
