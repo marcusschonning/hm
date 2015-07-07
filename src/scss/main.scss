@@ -10,23 +10,41 @@ body, html {
 	padding: 0;
 }
 
+.main-header {
+		margin: 0;
+		height: 10vh;
+		border-bottom: 1px solid #000;
+		h1 {
+			margin: 0;
+		}
+}
+
 .main-content {
 	height: 80%;
 	position: relative;
 	background: white;
 
-	.man, .woman {
-		width: 40%;
+	.shop, .inspiration, .run, .bottle {
+		width: 25%;
+		height: 90vh;
 		float: left;
 		margin: 0;
 		padding: 0;
 
-		h1 {
+		p {
 			margin: 0;
 			padding: 10px;
 			text-align: center;
 		}
 	}
+
+	.shop, .inspiration, .run {
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		border-right:1px solid #000;
+	}
+
 	.man {
 		background: url('../../img/hm_man_transparent.png') no-repeat center;
 		background-size: 500px 400px;
@@ -39,7 +57,6 @@ body, html {
 		height: 100%;
 
 	}
-
 	.bottle {
 		height: 100%;
 		width: 20%;

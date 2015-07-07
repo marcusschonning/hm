@@ -1,19 +1,22 @@
 <?php get_header(); ?>
 
 <div class="main-content">
-	<div class="qr" style="margin: 20px;"></div>
 
-	<div class="man">
-		<h1>MAN</h1>
+	<div class="shop">
+		<p>Shoppa</p>
+	</div>
+
+	<div class="inspiration">
+		<p>Inspiration</p>
+
+	</div>
+
+	<div class="run">
+		<p>Loppanmälan</p>
 	</div>
 
 	<div class="bottle">
-		<p>bottle goes here</p>
-
-	</div>
-
-	<div class="woman">
-		<h1>WOMAN</h1>
+		<p>Bottle</p>
 	</div>
 
 
