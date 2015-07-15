@@ -24,11 +24,17 @@
 		</div>
 	</div>
 	<div class="shop-sidebar">
-		<div class="home-button"></div>
-		<div class="logo"></div>
-		<div class="shopping-cart"></div>
-		<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident odio error unde consequatur totam! A et ducimus tempora quae.</p>
-			
+		<div class="home-button"><i class="fa fa-home"></i></div>
+		<div class="logo">
+			<span>H&#38;M</span>
+			<h3>Run For Water</h2>
+		</div>
+		<div class="shopping-cart">
+			<i class="fa fa-shopping-cart"></i>
+			<p>Totalt: <span class="total-price">199:-</span></p>
+		</div>
+		<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident odio error unde consequatur totam! A et ducimus tempora quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore corporis, ad provident ducimus veniam ullam sunt est optio beatae voluptatum. Sunt distinctio obcaecati tempore molestias perferendis quaerat, velit, voluptatem earum.</p>
+		
 	</div>
 </div>
 
