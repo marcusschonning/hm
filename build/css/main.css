@@ -1,1 +1,1 @@
-.bg-vid{display:block;position:fixed;top:0;left:0;width:100%;z-index:-1}
+html,body {height:100%;margin:0;padding:0}.man{left:0;background:url("../../img/man.png") no-repeat center center;background-size:cover}.woman{right:0;background:url("../../img/kvinna.png") no-repeat center center;background-size:cover}.gender{top:0;margin:0;width:50%;height:100%;position:absolute;transition:all 1s}

@@ -1,4 +1,14 @@
 jQuery(function($){
+
+	$('.man, .woman').on('click', function(e){
+		// $('.man').fadeOut("slow");
+		// $('.woman').fadeOut("slow");
+
+		$('.man').css("transform", "translateX(-100%)");
+		$('.woman').css("transform", "translateX(+100%)");
+
+	});
+
 	var products = [];
 
 	
