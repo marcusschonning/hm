@@ -5,6 +5,6 @@
 <div class="gender woman"></div>
 
 
-<div class="content" style="background: white"></div>
+<div class="content"></div>
 
 <?php get_footer(); ?>

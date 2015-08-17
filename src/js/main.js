@@ -3,27 +3,47 @@ jQuery(function($){
 	$('.man, .woman').on('click', function(e){
 		// $('.man').fadeOut("slow");
 		// $('.woman').fadeOut("slow");
+		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
+		if($(this).hasClass('man')){
+			gender_link += 'man';
+		}else if($(this).hasClass('woman')){
+			gender_link += 'woman';
+		}
+		$.ajax({
+			url: gender_link
+		}).done(function(res) {
+			$('.content').html( res );
+		});
 
 		$('.man').css("transform", "translateX(-100%)");
 		$('.woman').css("transform", "translateX(+100%)");
+		
+
+		
+
+		
 
 	});
 
 	var products = [];
 
 	
-	$('.product-link').on('click', function(e) {
+	$('.content').delegate('.product-link', 'click', function(e) {
 		e.preventDefault();
-		var url = $(this).attr('href');
-		$.ajax({
-			url: url
-		}).done(function(res) {
-			$('.content').html( res );
-		});
+		if($('.lightbox-product').text() === ''){
+			var url = $(this).attr('href');
+			$.ajax({
+				url: url
+			}).done(function(res) {
+				$('.content').append( res );
+			});
+	}else{
+		$('.lightbox-product').html('');
+	}
 	});
 
 	$('.content').delegate('.close', 'click', function(){
-		$('.content').html('');
+		$('.lightbox-product').html('');
 	});
 
 	$('.content').delegate('.add-to-cart', 'click', function(){
