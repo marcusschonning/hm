@@ -6,7 +6,7 @@ jQuery(function($){
 		if($(this).hasClass('man')){
 			gender_link += 'man';
 		}else if($(this).hasClass('woman')){
-			gender_link += 'woman';
+			gender_link += 'woman/insp';
 		}
 
 		$.ajax({
