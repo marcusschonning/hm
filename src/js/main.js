@@ -8,11 +8,13 @@ jQuery(function($){
 		}else if($(this).hasClass('woman')){
 			gender_link += 'woman';
 		}
+
 		$.ajax({
 			url: gender_link
 		}).done(function(res) {
 			$('.content').html( res );
 		});
+			
 
 		$('.man').css("transform", "translateX(-100%)");
 		$('.woman').css("transform", "translateX(+100%)");
@@ -23,6 +25,7 @@ jQuery(function($){
 
 		$('.man').css("transform", "translateX(0)");
 		$('.woman').css("transform", "translateX(0)");
+		$('.content').html('');
 
 	});
 
