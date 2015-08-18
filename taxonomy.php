@@ -3,8 +3,8 @@
 	<p>back</p>
 </div>
 
-<div>
-
+<div class="product-slider">
+>>>>>>> Stashed changes
 	<?php 
 	if ( have_posts() ) {
 		while ( have_posts() ) {
@@ -15,5 +15,20 @@
 		}
 	}
 	?>
+<div class="sidebar">
+	
+</div>
+
+<div class="categories-menu">
+	<ul>
+		<li>Inspiration</li>
+		<li>T-shirts</li>
+		<li>Byxor</li>
+		<li>Skor</li>
+		<li>Övrigt</li>
+		<li><?php get_search_form(); ?></li>
+	</ul>
+</div>
+>>>>>>> Stashed changes
 
 </div>
