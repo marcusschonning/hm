@@ -7,14 +7,10 @@
 <div class="shop-container">
 
 	<?php 
-	$term = get_terms('product_categories');
-	$taxonomy = "man";
 	$args = array( 'post_type' => 'products', 'posts_per_page' => -1);
 	$loop = new WP_Query( $args );
 	while ( $loop -> have_posts() ) {
 		$loop -> the_post();
-		get_term_link($term, $taxonomy); 
-		
 		echo the_taxonomies('');?>
 		<a class="product-link" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a><br />
 	<?php  

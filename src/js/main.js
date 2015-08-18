@@ -1,8 +1,7 @@
 jQuery(function($){
 
 	$('.man, .woman').on('click', function(e){
-		// $('.man').fadeOut("slow");
-		// $('.woman').fadeOut("slow");
+		
 		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
 		if($(this).hasClass('man')){
 			gender_link += 'man';
@@ -17,11 +16,13 @@ jQuery(function($){
 
 		$('.man').css("transform", "translateX(-100%)");
 		$('.woman').css("transform", "translateX(+100%)");
-		
 
-		
+	});
 
-		
+	$('.content').delegate('.back', 'click', function(e){
+
+		$('.man').css("transform", "translateX(0)");
+		$('.woman').css("transform", "translateX(0)");
 
 	});
 
