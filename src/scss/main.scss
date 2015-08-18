@@ -15,9 +15,12 @@ html, body {
 
 body {
 	background-image: url("../../img/concrete.png");
+	overflow: hidden;
 }
 
-
+#wrapper{
+	overflow: hidden;
+}
 .man {
 	left: 0;
 	background: url("../../img/man.png") no-repeat center center;
@@ -39,4 +42,22 @@ body {
 	position: absolute;
 	transition: all 1s;
 	
+}
+.product-slider{
+	width: 65%;
+	float: left;
+	outline: 1px solid red;
+	.product-link{
+		width: 33%;
+	}
+}
+.sidebar{
+	width: 35%;
+	float: left;
+	outline: 1px solid green;
+}
+.categories-menu{
+	width: 100%;
+	outline: 1px solid orange;
+	clear: both;
 }

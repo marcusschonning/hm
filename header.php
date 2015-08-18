@@ -27,8 +27,3 @@
 
 		<!-- Add your site or application content here -->
 		<div id="wrapper">
-			<div class="main-header">
-				<div class="hm-logo"><h1>H&#38;M</h1></div>
-				<div class="rfw-logo"></div>
-				<div class="cart"></div>
-			</div>
