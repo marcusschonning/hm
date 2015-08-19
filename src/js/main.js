@@ -1,13 +1,14 @@
 jQuery(function($){
-
-	$('.man, .woman').on('click', function(e){
+	var products = [];
+	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
+	$('.male, .female').on('click', function(e){
 		
 		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
-		if($(this).hasClass('man')){
-			gender_link += 'insp-man';
+		if($(this).hasClass('male')){
+			gender_link += 'man';
 			$('.content').toggleClass('.content-man');
-		}else if($(this).hasClass('woman')){
-			gender_link += 'insp-woman';
+		}else if($(this).hasClass('female')){
+			gender_link += 'woman';
 			$('.content').toggleClass('.content-woman');
 		}
 
@@ -15,52 +16,36 @@ jQuery(function($){
 			url: gender_link
 		}).done(function(res) {
 			$('.content').html( res );
+			$('.product-slider').isotope({
+				// options
+				itemSelector: '.product-link',
+				layoutMode: 'fitRows',
+				filter: '.insp'
+			});
 		});
-	
-			
 
-		$('.man').css("transform", "translateX(-100%)");
-		$('.woman').css("transform", "translateX(+100%)");
+		$('.male').css("transform", "translateX(-100%)");
+		$('.female').css("transform", "translateX(+100%)");
 
 	});
 
+	//OM MAN KLICKAR PÅ TILLBAKAKNAPPEN
 	$('.content').delegate('.back', 'click', function(e){
 
-		$('.man').css("transform", "translateX(0)");
-		$('.woman').css("transform", "translateX(0)");
+		$('.male').css("transform", "translateX(0)");
+		$('.female').css("transform", "translateX(0)");
 		$('.content').html('');
 
 	});
 
-
-	//OM MAN KLICKAR PÅ BYXOR
-
+	//OM MAN KLICKAR PÅ EN KATEGORI
 	$('.content').delegate('.cat', 'click', function(e){
-		$('.product-slider').html('');
-		// alert($(this).attr('class'));
-
-		var url = "http://localhost/terminsprojekt/product_categories/";
-
-		url += $(this).attr('class');
-		if ($('.content').hasClass('.content-man')) {
-			url += "-man";
-		} else if($('.content').hasClass('.content-woman')) {
-			url += "-woman";
-		};
-		
-		$.ajax({
-				url: url
-			}).done(function(res) {
-				var image = $(res).find('.product-link');
-				$('.product-slider').append( imgage );
-			});
+		var category = $(this).attr('category');
+		$('.product-slider').isotope({ filter: '.' + category });
 
 	});
 
-
-	var products = [];
-
-	
+	//OM MAN KLICKAR PÅ EN PRODUKT
 	$('.content').delegate('.product-link', 'click', function(e) {
 		e.preventDefault();
 		if($('.lightbox-product').text() === ''){
@@ -75,6 +60,8 @@ jQuery(function($){
 	}
 	});
 
+
+	
 	$('.content').delegate('.close', 'click', function(){
 		$('.lightbox-product').html('');
 	});

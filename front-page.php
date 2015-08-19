@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 
-<div class="gender man"></div>
-<div class="gender woman"></div>
+<div class="gender male"></div>
+<div class="gender female"></div>
 
 
 <div class="content"></div>

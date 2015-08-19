@@ -21,14 +21,14 @@ body {
 #wrapper{
 	overflow: hidden;
 }
-.man {
+.male {
 	left: 0;
 	background: url("../../img/man.png") no-repeat center center;
 	background-size: cover;
 	
 }
 
-.woman {
+.female {
 	right: 0;
 	background: url("../../img/kvinna.png") no-repeat center center;
 	background-size: cover;
@@ -41,6 +41,7 @@ body {
 	height: 100%;
 	position: absolute;
 	transition: all 1s;
+	z-index: 1;
 	
 }
 .product-slider{

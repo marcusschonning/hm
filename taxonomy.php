@@ -8,9 +8,18 @@
 	if ( have_posts() ) {
 		while ( have_posts() ) {
 			the_post(); 
+			$posttags = get_the_terms($post->ID, 'product_categories');
 			?>
-			<a class="product-link" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+			<a class="product-link 
 			<?php
+			foreach ($posttags as $term) {
+				echo ' ' . $term->name;
+			}
+			?>"
+			href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+			
+			<?php
+
 		}
 	}
 	?>
@@ -31,11 +40,11 @@
 
 <div class="categories-menu">
 	<ul>
-		<li class="cat insp">Inspiration</li>
-		<li class="cat tshirts">T-shirts</li>
-		<li class="cat pants">Byxor</li>
-		<li class="cat shoes">Skor</li>
-		<li class="cat misc">Övrigt</li>
+		<li class="cat" category="insp">Inspiration</li>
+		<li class="cat" category="tshirts">T-shirts</li>
+		<li class="cat" category="pants">Byxor</li>
+		<li class="cat" category="shoes">Skor</li>
+		<li class="cat" category="misc">Övrigt</li>
 		<li class="search"><?php get_search_form(); ?></li>
 	</ul>
 </div>
