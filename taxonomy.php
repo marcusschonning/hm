@@ -31,12 +31,12 @@
 
 <div class="categories-menu">
 	<ul>
-		<li>Inspiration</li>
-		<li>T-shirts</li>
-		<li>Byxor</li>
-		<li>Skor</li>
-		<li>Övrigt</li>
-		<li><?php get_search_form(); ?></li>
+		<li class="cat insp">Inspiration</li>
+		<li class="cat tshirts">T-shirts</li>
+		<li class="cat pants">Byxor</li>
+		<li class="cat shoes">Skor</li>
+		<li class="cat misc">Övrigt</li>
+		<li class="search"><?php get_search_form(); ?></li>
 	</ul>
 </div>
 

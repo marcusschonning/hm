@@ -5,8 +5,10 @@ jQuery(function($){
 		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
 		if($(this).hasClass('man')){
 			gender_link += 'insp-man';
+			$('.content').toggleClass('.content-man');
 		}else if($(this).hasClass('woman')){
-			gender_link += 'woman';
+			gender_link += 'insp-woman';
+			$('.content').toggleClass('.content-woman');
 		}
 
 		$.ajax({
@@ -29,6 +31,32 @@ jQuery(function($){
 		$('.content').html('');
 
 	});
+
+
+	//OM MAN KLICKAR PÅ BYXOR
+
+	$('.content').delegate('.cat', 'click', function(e){
+		$('.product-slider').html('');
+		// alert($(this).attr('class'));
+
+		var url = "http://localhost/terminsprojekt/product_categories/";
+
+		url += $(this).attr('class');
+		if ($('.content').hasClass('.content-man')) {
+			url += "-man";
+		} else if($('.content').hasClass('.content-woman')) {
+			url += "-woman";
+		};
+		
+		$.ajax({
+				url: url
+			}).done(function(res) {
+				var image = $(res).find('.product-link');
+				$('.product-slider').append( imgage );
+			});
+
+	});
+
 
 	var products = [];
 
