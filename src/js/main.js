@@ -4,7 +4,7 @@ jQuery(function($){
 		
 		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
 		if($(this).hasClass('man')){
-			gender_link += 'man';
+			gender_link += 'insp-man';
 		}else if($(this).hasClass('woman')){
 			gender_link += 'woman';
 		}
@@ -14,6 +14,7 @@ jQuery(function($){
 		}).done(function(res) {
 			$('.content').html( res );
 		});
+	
 			
 
 		$('.man').css("transform", "translateX(-100%)");
