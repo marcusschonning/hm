@@ -3,7 +3,8 @@ jQuery(function($){
 	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
 	$('.male, .female').on('click', function(e){
 		
-		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
+		var gender_link = 'http://hm.marcus-schonning.se/product_categories/';
+		//var gender_link = 'http://localhost/terminsprojekt/product_categories/';
 		if($(this).hasClass('male')){
 			gender_link += 'man';
 			$('.content').toggleClass('.content-man');
@@ -114,13 +115,15 @@ jQuery(function($){
 
 	
 	if($('body').hasClass('page-template-template-checkout')){
-		var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
+		var url = 'http://hm.marcus-schonning.se/hm/json/set_cart.php';
+		//var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 		$.post(
 			url,
 			{ 'json_obj': localStorage.getItem('products') },
 			function(res){
 				console.log(res);
-				var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
+				var link = 'http://hm.marcus-schonning.se/hm/app/hm_app.php?cart=' + res;
+				//var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
 				$('.qr').html('').qrcode({
 					size: 200,
 					text: link
