@@ -44,12 +44,20 @@ body {
 	z-index: 1;
 	
 }
+
+
 .product-slider{
 	width: 65%;
 	float: left;
 	outline: 1px solid red;
 	.product-link{
+		display: block;
 		width: 33%;
+		height: 200px;
+		img{
+			width: 100%;
+
+		}
 	}
 }
 .sidebar{
@@ -58,7 +66,38 @@ body {
 	outline: 1px solid green;
 }
 .categories-menu{
+	left: 0;
+	position: fixed;
+	bottom: 0;
 	width: 100%;
 	outline: 1px solid orange;
 	clear: both;
+	background: white;
+
+	//TEST
+	text-align: justify;
+	-ms-text-justify: distribute-all-lines;
+	text-justify: distribute-all-lines;
+	ul {
+		margin: 0;
+		padding: 20px;
+		height: 20px;
+		#shirt {
+			list-style-image: url("../../img/icons/shirt.png")no-repeat top left;
+		}
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		zoom: 1;
+		
+	}
+
+	.stretch {
+		width: 100%;
+		display: inline-block;
+		font-size: 0;
+		line-height: 0
+	}
 }

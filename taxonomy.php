@@ -17,13 +17,19 @@
 			}
 			?>"
 			href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-			
 			<?php
 
 		}
 	}
 	?>
 </div>
+
+<!-- <div class="your-slider">
+	<div>your content</div>
+	<div>your content</div>
+	<div>your content</div>
+	<div>your content</div>
+</div> -->
 <div class="sidebar">
 	<div class="steps">
 		Steg för att köpa
@@ -40,12 +46,15 @@
 
 <div class="categories-menu">
 	<ul>
+		<li class="cat" category="man">ALL</li>
 		<li class="cat" category="insp">Inspiration</li>
-		<li class="cat" category="tshirts">T-shirts</li>
+		<li class="cat" category="tshirts"><img src="img/icons/shirt.png">T-shirts</li>
 		<li class="cat" category="pants">Byxor</li>
 		<li class="cat" category="shoes">Skor</li>
 		<li class="cat" category="misc">Övrigt</li>
 		<li class="search"><?php get_search_form(); ?></li>
+		<li class="stretch"></li>
 	</ul>
+	<img src="img/icons/shirt.png">
 </div>
 

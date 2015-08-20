@@ -60,6 +60,16 @@ jQuery(function($){
 	}
 	});
 
+	//SLICK
+	$('.your-slider').slick({
+		swipe: true,
+		cssEase: 'ease-in',
+		dots: true
+	});
+
+
+
+
 
 	
 	$('.content').delegate('.close', 'click', function(){
