@@ -46,15 +46,12 @@
 
 <div class="categories-menu">
 	<ul>
-		<li class="cat" category="man">ALL</li>
-		<li class="cat" category="insp">Inspiration</li>
-		<li class="cat" category="tshirts"><img src="img/icons/shirt.png">T-shirts</li>
-		<li class="cat" category="pants">Byxor</li>
-		<li class="cat" category="shoes">Skor</li>
-		<li class="cat" category="misc">Övrigt</li>
-		<li class="search"><?php get_search_form(); ?></li>
-		<li class="stretch"></li>
+		<li class="cat all" category="man">ALL</li>
+		<li class="cat insp" category="insp">Inspiration</li>
+		<li class="cat shirt" category="tshirts"></li>
+		<li class="cat pants" category="pants"></li>
+		<li class="cat shoes" category="shoes"></li>
+		<li class="cat misc" category="misc">Övrigt</li>
 	</ul>
-	<img src="img/icons/shirt.png">
 </div>
 

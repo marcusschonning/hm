@@ -67,37 +67,38 @@ body {
 }
 .categories-menu{
 	left: 0;
-	position: fixed;
 	bottom: 0;
+	position: fixed;
 	width: 100%;
-	outline: 1px solid orange;
+	outline: 3px solid black;
 	clear: both;
 	background: white;
-
-	//TEST
-	text-align: justify;
-	-ms-text-justify: distribute-all-lines;
-	text-justify: distribute-all-lines;
 	ul {
 		margin: 0;
-		padding: 20px;
-		height: 20px;
-		#shirt {
-			list-style-image: url("../../img/icons/shirt.png")no-repeat top left;
-		}
+		padding: 0;
+		list-style-type: none;
 	}
 
 	li {
-		display: inline-block;
-		vertical-align: top;
-		zoom: 1;
-		
-	}
+		padding: 50px 0;
+		display: block;
+		float: left;
+		text-align: center;
+		vertical-align: center;
+		width: (100%/6.01);
 
-	.stretch {
-		width: 100%;
-		display: inline-block;
-		font-size: 0;
-		line-height: 0
+		&.shirt{
+			background: url("../../img/icons/shirt.png") no-repeat center center;
+			background-size: 35%;
+		}
+		&.pants{
+			background: url("../../img/icons/pants.png") no-repeat center center;
+			background-size: 35%;
+		}
+		&.shoes{
+			background: url("../../img/icons/shoes.png") no-repeat center center;
+			background-size: 35%;
+		}
+
 	}
 }
