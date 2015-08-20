@@ -43,6 +43,20 @@ jQuery(function($){
 		var category = $(this).attr('category');
 		$('.product-slider').isotope({ filter: '.' + category });
 
+		$('.product-link').before('<div>');
+		var count = 0;
+		$('.' + category).each(function(i){
+			count++;
+			if(count%3 === 0){
+
+				$(this).after('<div>');
+				$(this).after('</div>');
+
+				console.log($(this).attr('class'));
+			}
+			
+		});
+		$('.product-link').after('</div>');
 	});
 
 	//OM MAN KLICKAR PÅ EN PRODUKT
