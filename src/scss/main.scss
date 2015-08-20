@@ -1,11 +1,4 @@
-// .bg-vid {
-// 	display: block;
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	z-index: -1;
-// }
+
 
 html, body {
 	height: 100%;
@@ -21,6 +14,15 @@ body {
 #wrapper{
 	overflow: hidden;
 }
+.bg-vid {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
 .male {
 	left: 0;
 	background: url("../../img/man.png") no-repeat center center;
@@ -30,7 +32,7 @@ body {
 
 .female {
 	right: 0;
-	background: url("../../img/kvinna.png") no-repeat center center;
+	background: url("../../img/kvinna.png") no-repeat center right;
 	background-size: cover;
 }
 
@@ -53,7 +55,7 @@ body {
 	.product-link{
 		display: block;
 		width: 33%;
-		height: 200px;
+		height: auto;
 		img{
 			width: 100%;
 

@@ -1,8 +1,4 @@
 
-<div class="back">
-	<p>back</p>
-</div>
-
 <div class="product-slider">
 	<?php 
 	if ( have_posts() ) {
@@ -42,6 +38,9 @@
 		</ul>
 	</div>
 	<div class="qr"></div>
+	<div class="back">
+		<p>back</p>
+	</div>
 </div>
 
 <div class="categories-menu">
