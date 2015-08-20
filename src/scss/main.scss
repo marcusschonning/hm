@@ -63,9 +63,17 @@ body {
 	}
 }
 .sidebar{
-	width: 35%;
-	float: left;
-	outline: 1px solid green;
+	width: 30%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	outline: 3px solid black;
+	background: white;
+	
+	.steps {
+		font-size: 2em;
+	}
 }
 .categories-menu{
 	left: 0;
@@ -82,13 +90,22 @@ body {
 	}
 
 	li {
-		padding: 50px 0;
+		padding: 60px 0;
 		display: block;
 		float: left;
 		text-align: center;
 		vertical-align: center;
-		width: (100%/6.01);
+		width: (100%/5);
 
+
+		&.insp{
+			background: url("../../img/icons/insp.png") no-repeat center center;
+			background-size: 35%;
+		}
+		&.all{
+			background: url("../../img/icons/all.png") no-repeat center center;
+			background-size: 35%;
+		}
 		&.shirt{
 			background: url("../../img/icons/shirt.png") no-repeat center center;
 			background-size: 35%;
@@ -99,6 +116,10 @@ body {
 		}
 		&.shoes{
 			background: url("../../img/icons/shoes.png") no-repeat center center;
+			background-size: 35%;
+		}
+		&.misc{
+			background: url("../../img/icons/misc.png") no-repeat center center;
 			background-size: 35%;
 		}
 

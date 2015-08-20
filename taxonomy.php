@@ -45,12 +45,11 @@
 
 <div class="categories-menu">
 	<ul>
-		<li class="cat all" category="man">ALL</li>
-		<li class="cat insp" category="insp">Inspiration</li>
+		<li class="cat insp" category="insp"></li>
 		<li class="cat shirt" category="tshirts"></li>
 		<li class="cat pants" category="pants"></li>
 		<li class="cat shoes" category="shoes"></li>
-		<li class="cat misc" category="misc">Övrigt</li>
+		<li class="cat misc" category="misc"></li>
 	</ul>
 </div>
 
