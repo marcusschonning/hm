@@ -20,18 +20,12 @@
 	?>
 </div>
 
-<!-- <div class="your-slider">
-	<div>your content</div>
-	<div>your content</div>
-	<div>your content</div>
-	<div>your content</div>
-</div> -->
 <div class="sidebar">
 	<div class="steps">
-		Steg för att köpa
+		<h1>Steg för att köpa</h1>
 	</div>
 	<div class="info">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nesciunt cumque corrupti, perspiciatis maxime quam veritatis libero maiores accusamus fugiat assumenda fugit iste, animi earum nostrum, fuga voluptatem temporibus dignissimos.
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nesciunt cumque corrupti, perspiciatis maxime quam veritatis libero maiores accusamus fugiat assumenda fugit iste, animi earum nostrum, fuga voluptatem temporibus dignissimos.</p>
 	</div>
 	<div class="shopping-cart">
 		<ul class="cart">
