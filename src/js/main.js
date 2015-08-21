@@ -3,8 +3,8 @@ jQuery(function($){
 	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
 	$('.male, .female').on('click', function(e){
 		
-		var gender_link = 'http://hm.marcus-schonning.se/product_categories/';
-		//var gender_link = 'http://localhost/terminsprojekt/product_categories/';
+		// var gender_link = 'http://hm.marcus-schonning.se/product_categories/';
+		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
 		if($(this).hasClass('male')){
 			gender_link += 'man';
 			$('.content').toggleClass('.content-man');
@@ -17,12 +17,12 @@ jQuery(function($){
 			url: gender_link
 		}).done(function(res) {
 			$('.content').html( res );
-			$('.product-slider').isotope({
-				// options
-				itemSelector: '.product-link',
-				layoutMode: 'fitRows',
-				filter: '.insp'
-			});
+			// $('.product-slider').isotope({
+			// 	// options
+			// 	itemSelector: '.product-link',
+			// 	layoutMode: 'fitRows',
+			// 	filter: '.insp'
+			// });
 		});
 
 		$('.male').css("transform", "translateX(-100%)");
@@ -42,22 +42,31 @@ jQuery(function($){
 	//OM MAN KLICKAR PÅ EN KATEGORI
 	$('.content').delegate('.cat', 'click', function(e){
 		var category = $(this).attr('category');
-		$('.product-slider').isotope({ filter: '.' + category });
+		var row = $("<div></div>");
+		$(".product-slider").html('')
+		$("#all-products-container a").each(function(i){
 
-		$('.product-link').before('<div>');
-		var count = 0;
-		$('.' + category).each(function(i){
-			count++;
-			if(count%3 === 0){
-
-				$(this).after('<div>');
-				$(this).after('</div>');
-
-				console.log($(this).attr('class'));
+			if($(this).hasClass(category)){
+				row.append($(this).clone());
+				console.log("Moving link");
+				if(row.find("a").length>=3){
+					$(".product-slider").append(row);
+					row=$("<div></div>");
+				}
+				
 			}
-			
+
 		});
-		$('.product-link').after('</div>');
+		if(row.find("a").length>0) {
+			$(".product-slider").append(row);
+		}
+
+
+		$('.product-slider').slick({
+			swipe: true,
+			cssEase: 'ease-in',
+			dots: true
+		});
 	});
 
 	//OM MAN KLICKAR PÅ EN PRODUKT
@@ -76,14 +85,7 @@ jQuery(function($){
 	});
 
 	//SLICK
-	$('.your-slider').slick({
-		swipe: true,
-		cssEase: 'ease-in',
-		dots: true
-	});
-
-
-
+	
 
 
 	
@@ -115,15 +117,15 @@ jQuery(function($){
 
 	
 	if($('body').hasClass('page-template-template-checkout')){
-		var url = 'http://hm.marcus-schonning.se/hm/json/set_cart.php';
-		//var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
+		// var url = 'http://hm.marcus-schonning.se/hm/json/set_cart.php';
+		var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 		$.post(
 			url,
 			{ 'json_obj': localStorage.getItem('products') },
 			function(res){
 				console.log(res);
-				var link = 'http://hm.marcus-schonning.se/hm/app/hm_app.php?cart=' + res;
-				//var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
+				// var link = 'http://hm.marcus-schonning.se/hm/app/hm_app.php?cart=' + res;
+				var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
 				$('.qr').html('').qrcode({
 					size: 200,
 					text: link

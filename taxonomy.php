@@ -1,6 +1,6 @@
 
-<div class="product-slider">
-	<div>
+<div class="product-slider"></div>
+<div style="display: none;" id="all-products-container">
 	<?php 
 	if ( have_posts() ) {
 		while ( have_posts() ) {
@@ -19,7 +19,6 @@
 		}
 	}
 	?>
-	</div>
 </div>
 
 <div class="sidebar">
