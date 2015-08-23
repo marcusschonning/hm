@@ -1,4 +1,11 @@
 jQuery(function($){
+
+	$('.qr').html('').qrcode({
+					size: 100,
+					text: "bajs"
+				});
+
+	
 	var products = [];
 	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
 	$('.male, .female').on('click', function(e){
@@ -133,6 +140,59 @@ jQuery(function($){
 				});
 			}
 		);
+	}
+
+	if ($('video').hasClass('bg-vid')) {
+
+		var vid = $(".bg-vid");
+
+		vid.bind("loadeddata", function(e){
+
+			setInterval(function(){
+				var time = Math.floor(e.target.currentTime);
+				console.log(time); 
+			
+
+			switch (time) {
+			case 3:
+				console.log("3 seconds");
+				$(".vid-qr").css("visibility", "visible");
+				$(".vid-qr").css("top", "280px" );
+				$(".vid-qr").css("left", "170px" );
+				break;
+			case 8:
+				console.log("7 seconds");
+				$(".vid-qr").css("top", "380px" );
+				$(".vid-qr").css("left", "470px" );
+				break;
+			case 2:
+				day = "Tuesday";
+				break;
+			case 3:
+				day = "Wednesday";
+				break;
+			case 4:
+				day = "Thursday";
+				break;
+			case 5:
+				day = "Friday";
+				break;
+			case  6:
+				day = "Saturday";
+				break;
+
+			};
+			}, 1000);
+			
+	});
+
+		
+
+		
+		
+		
+
+
 	}
 });
 
