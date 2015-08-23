@@ -172,8 +172,10 @@ jQuery(function($){
 				$(".vid-qr").css("top", "180px" );
 				$(".vid-qr").css("left", "170px" );
 				break;
-			case 3:
-				day = "Wednesday";
+			case (time > 10.2 && time < 11.5):
+				$(".vid-qr").css("opacity", "1");
+				$(".vid-qr").css("top", "180px" );
+				$(".vid-qr").css("left", "170px" );
 				break;
 			case 4:
 				day = "Thursday";
