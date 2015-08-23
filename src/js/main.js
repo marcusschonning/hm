@@ -69,11 +69,11 @@ jQuery(function($){
 		}
 
 
-		$('.product-slider').slick({
-			swipe: true,
-			cssEase: 'ease-in',
-			dots: true
-		});
+		// $('.product-slider').slick({
+		// 	swipe: true,
+		// 	cssEase: 'ease-in',
+		// 	dots: true
+		// });
 	});
 
 	//OM MAN KLICKAR PÅ EN PRODUKT

@@ -71,23 +71,26 @@ body {
 	width: 70%;
 	float: left;
 	outline: 1px solid red;
-	overflow: scroll;
+	overflow-x: scroll;
+	overflow-y: hidden;
 	height: 400px;
+	white-space: nowrap;
 	div{
-		float: left;
 		position: relative;
-
-	}
-
-	.product-link{
-		display: block;
-		width: 33%;
-		height: auto;
-		float: left;
-		text-align: center;
-		position: absolute;
-		img{
-			transition: all 1s ease-in-out;
+		width: 100%;
+		height: 500px;
+		// float: left;
+		display: inline-block;
+		.product-link{
+			
+			width: 33%;
+			height: auto;
+			// float: left;
+			text-align: center;
+			position: absolute;
+			img{
+				transition: all 1s ease-in-out;
+			}
 		}
 	}
 }
