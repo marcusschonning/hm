@@ -113,10 +113,11 @@ jQuery(function($){
 		
 		var obj = JSON.stringify({ 'products': products });
 		localStorage.setItem('products', obj);
+
+		updateCart();
 	});
 
-	
-	if($('body').hasClass('page-template-template-checkout')){
+	function updateCart(){
 		// var url = 'http://hm.marcus-schonning.se/hm/json/set_cart.php';
 		var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 		$.post(
@@ -127,10 +128,15 @@ jQuery(function($){
 				// var link = 'http://hm.marcus-schonning.se/hm/app/hm_app.php?cart=' + res;
 				var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
 				$('.qr').html('').qrcode({
-					size: 200,
+					size: 100,
 					text: link
 				});
 			}
 		);
 	}
 });
+
+
+
+
+
