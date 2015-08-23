@@ -28,17 +28,12 @@
 	</div>
 	<div class="info">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nesciunt cumque corrupti, perspiciatis maxime quam veritatis libero maiores accusamus fugiat assumenda fugit iste, animi earum nostrum, fuga voluptatem temporibus dignissimos.</p>
-
-		<div class="cart">
-			<ul>
-				<li>T-Shirt 199:-</li>
-				<li>Pants 299:-</li>
-				<li>Thong 79:-</li>
-			</ul>
-		</div>
 	</div>
 	<div class="shopping-cart">
 		<ul class="cart">
+			<li>T-Shirt 199:-</li>
+			<li>Pants 299:-</li>
+			<li>Thong 79:-</li>
 		</ul>
 	</div>
 	<div class="qr"></div>
