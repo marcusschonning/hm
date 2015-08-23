@@ -5,7 +5,7 @@ jQuery(function($){
 					text: "bajs"
 				});
 
-	
+
 	var products = [];
 	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
 	$('.male, .female').on('click', function(e){
@@ -149,24 +149,28 @@ jQuery(function($){
 		vid.bind("loadeddata", function(e){
 
 			setInterval(function(){
-				var time = Math.floor(e.target.currentTime);
+				var time = e.target.currentTime;
 				console.log(time); 
 			
 
-			switch (time) {
-			case 3:
-				console.log("3 seconds");
-				$(".vid-qr").css("visibility", "visible");
+			switch (true) {
+			case (time > 3.8 && time < 5.8):
+				console.log("4 seconds");
+				$(".vid-qr").css("opacity", "1");
 				$(".vid-qr").css("top", "280px" );
 				$(".vid-qr").css("left", "170px" );
 				break;
-			case 8:
-				console.log("7 seconds");
+			case (time > 6 && time < 7.5):
+				console.log("5 seconds");
+				$(".vid-qr").css("opacity", "1");
 				$(".vid-qr").css("top", "380px" );
 				$(".vid-qr").css("left", "470px" );
 				break;
-			case 2:
-				day = "Tuesday";
+			case (time > 7.7 && time < 8.8): 
+				console.log("7 seconds");
+				$(".vid-qr").css("opacity", "1");
+				$(".vid-qr").css("top", "180px" );
+				$(".vid-qr").css("left", "170px" );
 				break;
 			case 3:
 				day = "Wednesday";
@@ -180,9 +184,12 @@ jQuery(function($){
 			case  6:
 				day = "Saturday";
 				break;
+			default:
+				$(".vid-qr").css("opacity", "0");
+				break;
 
 			};
-			}, 1000);
+			}, 100);
 			
 	});
 
