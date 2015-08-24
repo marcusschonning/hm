@@ -31,9 +31,6 @@
 	</div>
 	<div class="shopping-cart">
 		<ul class="cart">
-			<li>T-Shirt 199:-</li>
-			<li>Pants 299:-</li>
-			<li>Thong 79:-</li>
 		</ul>
 	</div>
 	<div class="qr"></div>

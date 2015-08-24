@@ -5,7 +5,7 @@ if ( have_posts() ) {
 		the_post(); 
 		?>
 		<div class="lightbox-product">
-			<div class="close fa fa-close"></div>
+			<div class="close fa fa-close">close</div>
 			<h1 class="title" product-id="<?php echo get_the_ID(); ?>"><?php echo the_title(); ?></h1>
 			<div class="price"><?php echo get_post_meta($post->ID, "product_price", true); ?>:-</div>
 			<div class="colors">
