@@ -184,42 +184,6 @@ jQuery(function($){
 				console.log(time); 
 			
 
-				switch (true) {
-				case (time > 3.8 && time < 5.8):
-					console.log("4 seconds");
-					$(".vid-qr").css("opacity", "1");
-					$(".vid-qr").css("top", "280px" );
-					$(".vid-qr").css("left", "170px" );
-					break;
-				case (time > 6 && time < 7.5):
-					console.log("5 seconds");
-					$(".vid-qr").css("opacity", "1");
-					$(".vid-qr").css("top", "380px" );
-					$(".vid-qr").css("left", "470px" );
-					break;
-				case (time > 7.7 && time < 8.8): 
-					console.log("7 seconds");
-					$(".vid-qr").css("opacity", "1");
-					$(".vid-qr").css("top", "180px" );
-					$(".vid-qr").css("left", "170px" );
-					break;
-				case 3:
-					day = "Wednesday";
-					break;
-				case 4:
-					day = "Thursday";
-					break;
-				case 5:
-					day = "Friday";
-					break;
-				case  6:
-					day = "Saturday";
-					break;
-				default:
-					$(".vid-qr").css("opacity", "0");
-					break;
-
-				}
 			}, 100);
 			
 		});
