@@ -155,36 +155,44 @@ jQuery(function($){
 
 			switch (true) {
 			case (time > 3.8 && time < 5.8):
-				console.log("4 seconds");
 				$(".vid-qr").css("opacity", "1");
-				$(".vid-qr").css("top", "280px" );
-				$(".vid-qr").css("left", "170px" );
+				$(".vid-qr").css("top", "305px" );
+				$(".vid-qr").css("left", "610px" );
 				break;
 			case (time > 6 && time < 7.5):
-				console.log("5 seconds");
 				$(".vid-qr").css("opacity", "1");
-				$(".vid-qr").css("top", "380px" );
-				$(".vid-qr").css("left", "470px" );
+				$(".vid-qr").css("top", "169px" );
+				$(".vid-qr").css("left", "796px" );
 				break;
 			case (time > 7.7 && time < 8.8): 
-				console.log("7 seconds");
 				$(".vid-qr").css("opacity", "1");
-				$(".vid-qr").css("top", "180px" );
-				$(".vid-qr").css("left", "170px" );
+				$(".vid-qr").css("top", "207px" );
+				$(".vid-qr").css("left", "435px" );
 				break;
 			case (time > 10.2 && time < 11.5):
 				$(".vid-qr").css("opacity", "1");
-				$(".vid-qr").css("top", "180px" );
-				$(".vid-qr").css("left", "170px" );
+				$(".vid-qr").css("top", "234px" );
+				$(".vid-qr").css("left", "847px" );
 				break;
-			case 4:
-				day = "Thursday";
+			case (time > 11.7 && time < 12.6):
+				$(".vid-qr").css("opacity", "1");
+				$(".vid-qr").css("top", "337px" );
+				$(".vid-qr").css("left", "746px" );
 				break;
-			case 5:
-				day = "Friday";
+			case (time > 12.8 && time < 14):
+				$(".vid-qr").css("opacity", "1");
+				$(".vid-qr").css("top", "186px" );
+				$(".vid-qr").css("left", "948px" );
 				break;
-			case  6:
-				day = "Saturday";
+			case (time > 15.5 && time < 18):
+				$(".vid-qr").css("opacity", "1");
+				$(".vid-qr").css("top", "284px" );
+				$(".vid-qr").css("left", "868px" );
+				break;
+			case (time > 19.4 && time < 20.8):
+				$(".vid-qr").css("opacity", "1");
+				$(".vid-qr").css("top", "263px" );
+				$(".vid-qr").css("left", "1039px" );
 				break;
 			default:
 				$(".vid-qr").css("opacity", "0");
@@ -195,14 +203,15 @@ jQuery(function($){
 			
 	});
 
-		
-
-		
-		
-		
-
-
 	}
+
+	$(document).on('click', function(e){
+		var pos = " 'X: " + e.pageX + " Y: " + e.pageY + " ' ";
+		console.log(pos);
+	});
+	
+
+		
 });
 
 
