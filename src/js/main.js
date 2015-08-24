@@ -53,6 +53,8 @@ jQuery(function($){
 				}
 
 			});
+
+			$(".categories-menu .insp" ).trigger( "click" );
 		});
 
 		$('.male').css("transform", "translateX(-100%)");
@@ -116,8 +118,6 @@ jQuery(function($){
 			}).done(function(res) {
 				$('.content ').append( res );
 			});
-
-			//penis
 		}
 	});
 
