@@ -183,7 +183,7 @@ jQuery(function($){
 		var obj = JSON.stringify({ 'products': products });
 		localStorage.setItem('products', obj);
 
-		$('.sidebar .cart').append('<li>'+name+', '+price+':-</li>')
+		$('.sidebar .cart').append('<li>'+name+', ' +size+ ', '+price+':-</li>')
 		updateCart();
 	});
 
