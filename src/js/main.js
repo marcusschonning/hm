@@ -131,6 +131,7 @@ jQuery(function($){
 	$('.content').delegate('.add-to-cart', 'click', function(){
 		
 		var id = parseInt($(this).siblings('.title').attr('product-id'));
+		var img = $(this).siblings('.title').text();
 		var name = $(this).siblings('.title').text();
 		var price = parseInt($(this).siblings('.price').text());
 		var color = $(this).siblings('.colors').children('input[type="radio"][name="color"]:checked').val();
