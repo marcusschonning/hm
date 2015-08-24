@@ -23,6 +23,23 @@ jQuery(function($){
 			var currentPosLeft = 0;
 			var sRight = true;
 			var sLeft = false;
+
+			// $('.product-slider').bind('mousewheel', function(event){
+			// 	console.log(event.originalEvent.deltaX);
+			// 	var delta = event.originalEvent.deltaX
+			// 	if(delta < 0){
+			// 		$('.product-slider').animate({scrollLeft: $(currentElement).offset().left}, 800,function(){
+						
+			// 		});
+
+			// 	}
+
+			// 		//console.log($(this).children().position().left);
+			// 	return false;
+				
+			// });
+
+			/*SCROLLLLLLLLL*/
 			$('.product-slider').scroll(function(e) {
 				//console.log($(this).children().position().left);
 				currentPosLeft = $(this).children().position().left;
@@ -34,8 +51,11 @@ jQuery(function($){
 				//console.log('last pos:'+lastPosLeft+', currentpos:'+currentPosLeft);
 				if(lastPosLeft > currentPosLeft && sRight){
 					console.log('scroll till höger');
+					$('.dots span').toggleClass('dots-active');
 					var currentElement = $('.product-slider div').next();
-					$('.product-slider').animate({scrollLeft: $(currentElement).offset().left}, 800);
+					$('.product-slider').animate({scrollLeft: $(currentElement).offset().left}, 800,function(){
+
+					});
 					sRight = false;
 					setTimeout(function(){
 						sLeft = true;
@@ -43,6 +63,7 @@ jQuery(function($){
 					
 				}else if(lastPosLeft < currentPosLeft && sLeft){
 					console.log('scroll till vänster');
+					$('.dots span').toggleClass('dots-active');
 					var currentElement = $('.product-slider div').next();
 					$('.product-slider').animate({scrollLeft: -1 * $(currentElement).offset().left}, 800);
 					sLeft = false;
@@ -53,6 +74,8 @@ jQuery(function($){
 				}
 
 			});
+
+			/*SCROLLLLLLLLL*/
 
 			$(".categories-menu .insp" ).trigger( "click" );
 		});
@@ -87,14 +110,21 @@ jQuery(function($){
 				if(row.find("a").length>=3){
 					$(".product-slider").append(row);
 					row=$("<div></div>");
+
 				}
 				
 			}
+			
 
 		});
 		if(row.find("a").length>0) {
 			$(".product-slider").append(row);
 		}
+		$('.product-slider').append('<span class="dots"></span>');
+		$('.product-slider div').each(function(){
+			$('.dots').append('<span></span>');
+		});
+		$('.dots span:nth-child(1)').addClass('dots-active');
 
 
 	});
