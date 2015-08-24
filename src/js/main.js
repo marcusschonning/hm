@@ -2,7 +2,20 @@ jQuery(function($){
 
 	var products = [];
 	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
+
+	// $('body').delegate('.product-slider','mousewheel', function(event){
+	// 	console.log(event.originalEvent.deltaX);
+	// 	var delta = event.originalEvent.deltaX;
+				
+
+	// 	//console.log($(this).children().position().left);
+	// 	return false;
+				
+	// });
+
 	$('.male, .female').on('click', function(e){
+
+
 		
 		// var gender_link = 'http://hm.marcus-schonning.se/product_categories/';
 		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
@@ -24,20 +37,7 @@ jQuery(function($){
 			var sRight = true;
 			var sLeft = false;
 
-			// $('.product-slider').bind('mousewheel', function(event){
-			// 	console.log(event.originalEvent.deltaX);
-			// 	var delta = event.originalEvent.deltaX
-			// 	if(delta < 0){
-			// 		$('.product-slider').animate({scrollLeft: $(currentElement).offset().left}, 800,function(){
-						
-			// 		});
 
-			// 	}
-
-			// 		//console.log($(this).children().position().left);
-			// 	return false;
-				
-			// });
 
 			/*SCROLLLLLLLLL*/
 			$('.product-slider').scroll(function(e) {
@@ -99,7 +99,7 @@ jQuery(function($){
 	//OM MAN KLICKAR PÅ EN KATEGORI
 	$('.content').delegate('.cat', 'click', function(e){
 		var category = $(this).attr('category');
-		var row = $("<div></div>");
+		var row = $("<div class='tripplet'></div>");
 		$(".product-slider").html('');
 		$('.lightbox-product').html('');
 		$("#all-products-container a").each(function(i){
@@ -109,7 +109,7 @@ jQuery(function($){
 				console.log("Moving link");
 				if(row.find("a").length>=3){
 					$(".product-slider").append(row);
-					row=$("<div></div>");
+					row=$("<div class='tripplet'></div>");
 
 				}
 				
