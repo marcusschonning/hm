@@ -53,6 +53,8 @@ jQuery(function($){
 				}
 
 			});
+
+			$(".categories-menu .insp" ).trigger( "click" );
 		});
 
 		$('.male').css("transform", "translateX(-100%)");
