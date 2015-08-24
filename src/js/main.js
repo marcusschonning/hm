@@ -1,7 +1,7 @@
 jQuery(function($){
 
 	var products = [];
-	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
+	
 
 	// $('body').delegate('.product-slider','mousewheel', function(event){
 	// 	console.log(event.originalEvent.deltaX);
@@ -12,7 +12,7 @@ jQuery(function($){
 	// 	return false;
 				
 	// });
-
+	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
 	$('.male, .female').on('click', function(e){
 
 
@@ -183,7 +183,7 @@ jQuery(function($){
 		var obj = JSON.stringify({ 'products': products });
 		localStorage.setItem('products', obj);
 
-		$('.sidebar .cart').append('<li>'+name+', '+price+':-</li>')
+		$('.sidebar .cart').append('<li>'+name+', ' +size+ ', '+price+':-</li>')
 		updateCart();
 	});
 

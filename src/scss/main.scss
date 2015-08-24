@@ -50,11 +50,14 @@ body {
 	position: absolute;
 	transition: all 1s;
 	z-index: 1;
-	box-shadow: inset 0 0 20px 3px rgba(0, 0, 0, 1);
+	box-shadow: inset 0 0 20px 3px rgba(0, 0, 0, 0.7);
 	//border: 1px solid white;
 	h2{
 		text-align: center;
-		color: #333;
+		color: #fdfdfd;
+		font-size: 2.5em;
+		-webkit-text-stroke-width: 1px;
+ 		-webkit-text-stroke-color: #333;
 	}
 	
 }
@@ -64,6 +67,10 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	color: white;
+	img {
+		margin-top: 20px;
+		height: 100px;
+	}
 }
 
 
@@ -73,7 +80,7 @@ body {
 	outline: 1px solid red;
 	overflow-x: scroll;
 	overflow-y: hidden;
-	height: 100%;
+	height: 2000px;
 	white-space: nowrap;
 	// position: relative;
 	div{
@@ -122,31 +129,55 @@ body {
 	z-index:9;
 	left: 50%;
 }
+
+.step {
+	margin: 0; 
+	padding: 0;
+
+	h1 {
+		font-size: 15px;
+		background: #FF695D;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 1px solid gray;
+		text-align: center;
+		float: left;
+		margin-right: 5px;
+		line-height: 20px;
+		
+	}
+	p {
+		font-size: 12px;
+		float: left;
+		margin-right: 15px;
+	 }
+}
+
 .sidebar{
 	width: 30%;
 	height: 100%;
 	position: fixed;
-	padding: 20px 40px;
+	padding: 20px 20px;
 	top: 0;
 	right: 0;
 	outline: 3px solid black;
 	background: white;
-	
-	.steps {
-		h1 {
-			margin: 20px;
-			padding: 20px;
-			font-size: 20px;
-		}
+
+	p {
+		position: inline-block;
 	}
+	
 
 	.info {
+		padding: 0 20px;
 		p {
 			font-size: 15px;
 		}
 	}
 	.shopping-cart {
 		margin: 0 auto;
+		padding: 0 20px;
 		width: 80%;
 		max-height: 100px;
 		overflow-y: scroll;
