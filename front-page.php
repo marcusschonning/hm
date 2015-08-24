@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<h1 class="logo">H&#38;M</h1>
+<div class="logo">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/icons/hm.png">
+</div>
 <div class="gender male">
 	<h2>MAN</h2>
 </div>

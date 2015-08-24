@@ -23,9 +23,14 @@
 
 <div class="sidebar">
 	<div class="steps">
-
-		<h1>Steg för att köpa</h1>
+		<div class="step">
+			<h1>1</h1><p>Välj</p>
+			<h1>2</h1><p>Skanna</p>
+			<h1>3</h1><p>Betala i H&M-appen</p>
+		</div>
 	</div>
+	<br />
+
 	<div class="info">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nesciunt cumque corrupti, perspiciatis maxime quam veritatis libero maiores accusamus fugiat assumenda fugit iste, animi earum nostrum, fuga voluptatem temporibus dignissimos.</p>
 	</div>
