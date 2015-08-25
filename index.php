@@ -11,10 +11,6 @@
 
 	</div>
 
-	<div class="run">
-		<p>Loppanmälan</p>
-	</div>
-
 	<div class="bottle">
 		<p>Bottle</p>
 	</div>

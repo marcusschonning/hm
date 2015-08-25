@@ -15,7 +15,7 @@ jQuery(function($){
 	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
 	$('.male, .female').on('click', function(e){
 
-
+		$('.logo').fadeOut('500');
 		
 		// var gender_link = 'http://hm.marcus-schonning.se/product_categories/';
 		var gender_link = 'http://localhost/terminsprojekt/product_categories/';
@@ -36,8 +36,8 @@ jQuery(function($){
 			var currentPosLeft = 0;
 			var sRight = true;
 			var sLeft = false;
-
-
+			$('.content').hide();
+			$('.content').fadeIn(500);
 
 			/*SCROLLLLLLLLL*/
 			$('.product-slider').scroll(function(e) {
@@ -91,6 +91,10 @@ jQuery(function($){
 		$('.male').css("transform", "translateX(0)");
 		$('.female').css("transform", "translateX(0)");
 		$('.content').html('');
+		setTimeout(function(){
+			$('.logo').fadeIn(500);
+		}, 1000);
+		
 
 	});
 
@@ -98,6 +102,7 @@ jQuery(function($){
 
 	//OM MAN KLICKAR PÅ EN KATEGORI
 	$('.content').delegate('.cat', 'click', function(e){
+		$('.product-slider').hide();
 		var category = $(this).attr('category');
 		var row = $("<div class='tripplet'></div>");
 		$(".product-slider").html('');
@@ -125,6 +130,9 @@ jQuery(function($){
 			$('.dots').append('<span></span>');
 		});
 		$('.dots span:nth-child(1)').addClass('dots-active');
+		
+
+		$('.product-slider').fadeIn(500);
 
 
 	});
@@ -135,13 +143,18 @@ jQuery(function($){
 		var link = $(this);
 		if($('.lightbox-product').text() === ''){
 			var url = $(this).attr('href');
+			$('.product-link img').css('transform', 'scale(1)');
+			link.children('img').css('transform', 'scale(1.5)');
 			$.ajax({
 				url: url
 			}).done(function(res) {
 				$('.content ').append( res );
+
 			});
 	}else{
-		$('.lightbox-product').html('');
+		$('.lightbox-product').remove();
+		$('.product-link img').css('transform', 'scale(1)');
+			link.children('img').css('transform', 'scale(1.5)');
 		var url = $(this).attr('href');
 		$.ajax({
 				url: url
@@ -157,7 +170,8 @@ jQuery(function($){
 
 	
 	$('.content').delegate('.close', 'click', function(){
-		$('.lightbox-product').html('');
+		$('.lightbox-product').remove();
+		$('.product-link img').css('transform', 'scale(1)');
 	});
 
 	$('.content').delegate('.add-to-cart', 'click', function(){
