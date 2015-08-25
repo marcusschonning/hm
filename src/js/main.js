@@ -181,6 +181,7 @@ jQuery(function($){
 		var price = parseInt($(this).siblings('.price').text());
 		var color = $(this).siblings('.colors').children('input[type="radio"][name="color"]:checked').val();
 		var size = $(this).siblings('.sizes').children('input[type="radio"][name="size"]:checked').val();
+		var img = $(this).siblings('.img').attr('imageLink');
 		products.push({
 			'id': id,
 			'price': price,
@@ -193,11 +194,12 @@ jQuery(function($){
 		console.log(color);
 		console.log(size);
 		console.log(products);
+
 		
 		var obj = JSON.stringify({ 'products': products });
 		localStorage.setItem('products', obj);
 
-		$('.sidebar .cart').append('<li>'+name+', ' +size+ ', '+price+':-</li>')
+		$('.sidebar .cart').append('<li><img src="'+img+'">'+name+', ' +size+ ', '+price+':-</li>');
 		updateCart();
 	});
 
