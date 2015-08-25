@@ -214,13 +214,27 @@ body {
 			list-style-type: none;
 			width: 100%;
 			height: 100%;
-
-			li {
-				height: 33%;
+			li{
+				position: relative;
+				img{
+					margin-top: 5px;
+					width: 50px;
+				}
+				span{
+					margin-left: 5px;
+					top: 50%;
+					transform: translateY(-50%);
+					position: absolute;
+				}
 			}
 
+			// li {
+			// 	height: 33%;
+				
+			// }
+
 			li:nth-child(odd){
-				background: lightgrey;
+				background: #CDF9F0;
 			}
 		}
 	}

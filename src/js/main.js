@@ -199,7 +199,7 @@ jQuery(function($){
 		var obj = JSON.stringify({ 'products': products });
 		localStorage.setItem('products', obj);
 
-		$('.sidebar .cart').append('<li><img src="'+img+'">'+name+', ' +size+ ', '+price+':-</li>');
+		$('.sidebar .cart').append('<li><img src="'+img+'"><span>'+name+', ' +size+ ', '+price+':-</span></li>');
 		updateCart();
 	});
 
