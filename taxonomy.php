@@ -40,10 +40,15 @@
 	<div class="shopping-cart">
 		<ul class="cart">
 		</ul>
+
+		<div class="total">
+			Totalt: <span>0</span>:-
+		</div>
 	</div>
+	
 	<div class="qr"></div>
 	<div class="back">
-		<p>back</p>
+		<i class="fa fa-undo"></i>
 	</div>
 </div>
 

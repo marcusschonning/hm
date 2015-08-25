@@ -174,6 +174,9 @@ jQuery(function($){
 		$('.product-link img').css('transform', 'scale(1)');
 	});
 
+
+	var total = 0;
+
 	$('.content').delegate('.add-to-cart', 'click', function(){
 		
 		var id = parseInt($(this).siblings('.title').attr('product-id'));
@@ -200,10 +203,13 @@ jQuery(function($){
 		localStorage.setItem('products', obj);
 
 		$('.sidebar .cart').append('<li><img src="'+img+'"><span>'+name+', ' +size+ ', '+price+':-</span></li>');
-		updateCart();
+		updateQr();
+
+		total += price;
+		$('.total span').html(total);
 	});
 
-	function updateCart(){
+	function updateQr(){
 		// var url = 'http://hm.marcus-schonning.se/hm/json/set_cart.php';
 		var url = 'http://localhost/terminsprojekt/hm/json/set_cart.php';
 		$.post(
