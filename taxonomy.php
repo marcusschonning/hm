@@ -24,9 +24,12 @@
 <div class="sidebar">
 	<div class="steps">
 		<div class="step">
-			<h1>1</h1><p>Välj</p>
-			<h1>2</h1><p>Skanna</p>
-			<h1>3</h1><p>Betala i H&M-appen</p>
+			<div><p class="number">1</p><p class="option">Välj</p></div>
+			<div><p class="number">2</p><p class="option">Skanna</p></div>
+			<div><p class="number">3</p><p class="option">Betala</p></div>
+			<!-- <h1>1</h1><p>Välj</p> -->
+			<!-- <h1>2</h1><p>Skanna</p> -->
+			<!-- <h1>3</h1><p>Betala i H&M-appen</p> -->
 		</div>
 	</div>
 	<br />
