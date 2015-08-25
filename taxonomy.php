@@ -24,9 +24,9 @@
 <div class="sidebar">
 	<div class="steps">
 		<div class="step">
-			<div><p class="number">1</p><p class="option">Välj</p></div>
-			<div><p class="number">2</p><p class="option">Skanna</p></div>
-			<div><p class="number">3</p><p class="option">Betala</p></div>
+			<div><span><p class="number">1</p><p class="option">Välj kläder</p></span></div>
+			<div><span><p class="number">2</p><p class="option">Skanna QR-koden</p></span></div>
+			<div><span><p class="number">3</p><p class="option">Betala i appen</p></span></div>
 			<!-- <h1>1</h1><p>Välj</p> -->
 			<!-- <h1>2</h1><p>Skanna</p> -->
 			<!-- <h1>3</h1><p>Betala i H&M-appen</p> -->
@@ -52,13 +52,14 @@
 	</div>
 </div>
 
+<div class="shadow"></div>
 <div class="categories-menu">
 	<ul>
-		<li class="cat insp" category="insp"></li>
-		<li class="cat shirt" category="tshirts"></li>
-		<li class="cat pants" category="pants"></li>
-		<li class="cat shoes" category="shoes"></li>
-		<li class="cat misc" category="misc"></li>
+		<li class="cat insp" category="insp"><span class="active"></span></li>
+		<li class="cat shirt" category="tshirts"><span></span></li>
+		<li class="cat pants" category="pants"><span></span></li>
+		<li class="cat shoes" category="shoes"><span></span></li>
+		<li class="cat misc" category="misc"><span></span></li>
 	</ul>
 </div>
 

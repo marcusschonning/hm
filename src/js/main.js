@@ -102,6 +102,11 @@ jQuery(function($){
 
 	//OM MAN KLICKAR PÅ EN KATEGORI
 	$('.content').delegate('.cat', 'click', function(e){
+		$('.categories-menu ul li').each(function(){
+			$(this).children('span').removeClass('active');
+		});
+		
+		$(this).children('span').addClass('active');
 		$('.product-slider').hide();
 		var category = $(this).attr('category');
 		var row = $("<div class='tripplet'></div>");
