@@ -5,22 +5,9 @@ if ( have_posts() ) {
 		the_post(); 
 		?>
 		<div class="lightbox-product">
-			<div class="close fa fa-close">close</div>
+			<div class="close fa fa-close"></div>
 			<h1 class="title" product-id="<?php echo get_the_ID(); ?>"><?php echo the_title(); ?></h1>
-			<div class="price"><?php echo get_post_meta($post->ID, "product_price", true); ?>:-</div>
-			<div class="colors">
-			<?php
-			$colors = get_post_meta($post->ID, "product_color", true);
-			if($colors > 1){
-				foreach ($colors as $color) {
-				?>
-					<input type="radio" name="color" value="<?php echo $color; ?>" id="<?php echo $color ?>">
-					<label for="<?php echo $color; ?>"><?php echo $color ?></label>
-					<?php
-				}
-			}
-			?>				
-			</div>
+			<div class="description"><?php echo the_content(); ?></div>
 			<?php
 			if (get_post_meta($post->ID, "product_size", true) === "onesize") {
 				echo "Onesize";
@@ -38,6 +25,7 @@ if ( have_posts() ) {
 					<input type="radio" name="size" value='XL' id="xl" />
 					<label for="xl">XL</label>
 				</div>
+				<div class="price">Pris: <?php echo get_post_meta($post->ID, "product_price", true); ?>:-</div>
 				<?php
 			}
 
