@@ -198,7 +198,11 @@ jQuery(function($){
 		var name = $(this).siblings('.title').text();
 		var price = parseInt($(this).siblings('.price').children('span').text());
 		var color = $(this).siblings('.colors').children('input[type="radio"][name="color"]:checked').val();
-		var size = $(this).siblings('.sizes').children('input[type="radio"][name="size"]:checked').val();
+		if($(this).siblings('.sizes').text() === 'Onesize'){
+			var size = 'Onesize';
+		}else{
+			var size = $(this).siblings('.sizes').children('input[type="radio"][name="size"]:checked').val();
+		}
 		var img = $(this).siblings('.img').attr('imageLink');
 		products.push({
 			'id': id,

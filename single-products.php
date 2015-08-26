@@ -10,7 +10,7 @@ if ( have_posts() ) {
 			<div class="description"><?php echo the_content(); ?></div>
 			<?php
 			if (get_post_meta($post->ID, "product_size", true) === "onesize") {
-				echo "Onesize";
+				echo "<span class='sizes'>Onesize</span>";
 			} else if (get_post_meta($post->ID, "product_size", true) === "multiple") {
 				?>
 				<div class="sizes">

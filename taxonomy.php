@@ -24,6 +24,9 @@
 <div class="back">
 	<i class="fa fa-arrow-left"></i>
 </div>
+<div class="logo2">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/icons/hm.png" alt="Logo">
+</div>
 
 <div class="sidebar">
 	<div class="steps">
