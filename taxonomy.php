@@ -21,6 +21,10 @@
 	?>
 </div>
 
+<div class="back">
+	<i class="fa fa-arrow-left"></i>
+</div>
+
 <div class="sidebar">
 	<div class="steps">
 		<div class="step">
@@ -46,9 +50,6 @@
 	</div>
 	
 	<div class="qr"></div>
-	<div class="back">
-		<i class="fa fa-undo"></i>
-	</div>
 </div>
 
 <div class="shadow"></div>

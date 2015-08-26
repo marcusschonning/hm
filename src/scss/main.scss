@@ -126,12 +126,27 @@ body {
 	}
 }
 .lightbox-product{
+	display: none;
 	position: absolute;
-	background: lightblue;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 5px;
 	z-index:9;
-	left: 50%;
-	width: 210px;
+	top: 150px;
 	padding: 5px 15px 15px;
+	transform: translateX(100%);
+	box-shadow: 0 0 5px 0 black;
+
+	h1{
+		margin-bottom: 0;
+	}
+	p{
+		color: #777;
+	}
+
+	div{
+		margin-top: 10px;
+	}
+
 
 	.close{
 		float:right;
@@ -139,6 +154,11 @@ body {
 
 	.add-to-cart{
 		font-weight: bold;
+		i{
+			font-size: 20px;
+			margin-left: 10px;
+			color: #777;
+		}
 	}
 }
 
@@ -209,6 +229,15 @@ body {
 	// 	float: left;
 	// 	margin-right: 15px;
 	//  }
+}
+
+.back{
+	font-size: 50px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 15px;
+	
 }
 
 .sidebar{
@@ -284,13 +313,7 @@ body {
 		margin: 20px 0;
 	}
 
-	.back{
-		font-size: 50px;
-		text-align: center;
-		position: absolute;
-		right: 20%;
-		margin-top: 25px;
-	}
+	
 
 }
 .shadow{
