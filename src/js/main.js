@@ -60,6 +60,7 @@ jQuery(function($){
 					setTimeout(function(){
 						sLeft = true;
 					}, 800);
+					$('.lightbox-product').remove();
 					
 				}else if(lastPosLeft < currentPosLeft && sLeft){
 					console.log('scroll till vänster');
@@ -69,8 +70,10 @@ jQuery(function($){
 					sLeft = false;
 					setTimeout(function(){
 						sRight = true;
+
 						
 					}, 800);
+					$('.lightbox-product').remove();
 				}
 
 			});
@@ -111,7 +114,7 @@ jQuery(function($){
 		var category = $(this).attr('category');
 		var row = $("<div class='tripplet'></div>");
 		$(".product-slider").html('');
-		$('.lightbox-product').html('');
+		$('.lightbox-product').remove();
 		$("#all-products-container a").each(function(i){
 
 			if($(this).hasClass(category)){
@@ -154,6 +157,10 @@ jQuery(function($){
 				url: url
 			}).done(function(res) {
 				$('.content ').append( res );
+				$('.lightbox-product').fadeIn(200);
+				var posleft = link.offset().left + 50;
+				$('.lightbox-product').css('left', posleft);
+
 
 			});
 		}else{
@@ -165,6 +172,9 @@ jQuery(function($){
 					url: url
 				}).done(function(res) {
 					$('.content ').append( res );
+					$('.lightbox-product').fadeIn(200);
+					var posleft = link.offset().left + 50;
+					$('.lightbox-product').css('left', posleft);
 				});
 		}
 	});

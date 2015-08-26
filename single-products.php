@@ -31,7 +31,7 @@ if ( have_posts() ) {
 
 			?>
 			<div class="img" imageLink="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>"></div>
-			<div class="add-to-cart">add to cart</div>
+			<div class="add-to-cart">Add to cart<i class="fa fa-cart-plus"></i></div>
 		
 
 	</div>
