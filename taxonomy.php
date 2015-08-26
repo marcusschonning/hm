@@ -32,10 +32,9 @@
 			<!-- <h1>3</h1><p>Betala i H&M-appen</p> -->
 		</div>
 	</div>
-	<br />
-
 	<div class="info">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nesciunt cumque corrupti, perspiciatis maxime quam veritatis libero maiores accusamus fugiat assumenda fugit iste, animi earum nostrum, fuga voluptatem temporibus dignissimos.</p>
+		<h4>Titel</h4>
+		<p>Proactively architect proactive innovation via bricks-and-clicks ROI. Synergistically impact fully tested core competencies before market-driven niches. Enthusiastically reconceptualize top-line strategic theme areas whereas innovative scenarios.</p>
 	</div>
 	<div class="shopping-cart">
 		<ul class="cart">

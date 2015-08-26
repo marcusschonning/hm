@@ -25,7 +25,7 @@ if ( have_posts() ) {
 					<input type="radio" name="size" value='XL' id="xl" />
 					<label for="xl">XL</label>
 				</div>
-				<div class="price">Pris: <?php echo get_post_meta($post->ID, "product_price", true); ?>:-</div>
+				<div class="price">Pris: <span><?php echo get_post_meta($post->ID, "product_price", true); ?></span>:-</div>
 				<?php
 			}
 

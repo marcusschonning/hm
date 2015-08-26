@@ -156,16 +156,16 @@ jQuery(function($){
 				$('.content ').append( res );
 
 			});
-	}else{
-		$('.lightbox-product').remove();
-		$('.product-link img').css('transform', 'scale(1)');
-			link.children('img').css('transform', 'scale(1.5)');
-		var url = $(this).attr('href');
-		$.ajax({
-				url: url
-			}).done(function(res) {
-				$('.content ').append( res );
-			});
+		}else{
+			$('.lightbox-product').remove();
+			$('.product-link img').css('transform', 'scale(1)');
+				link.children('img').css('transform', 'scale(1.5)');
+			var url = $(this).attr('href');
+			$.ajax({
+					url: url
+				}).done(function(res) {
+					$('.content ').append( res );
+				});
 		}
 	});
 
@@ -186,7 +186,7 @@ jQuery(function($){
 		
 		var id = parseInt($(this).siblings('.title').attr('product-id'));
 		var name = $(this).siblings('.title').text();
-		var price = parseInt($(this).siblings('.price').text());
+		var price = parseInt($(this).siblings('.price').children('span').text());
 		var color = $(this).siblings('.colors').children('input[type="radio"][name="color"]:checked').val();
 		var size = $(this).siblings('.sizes').children('input[type="radio"][name="size"]:checked').val();
 		var img = $(this).siblings('.img').attr('imageLink');
@@ -221,7 +221,7 @@ jQuery(function($){
 			url,
 			{ 'json_obj': localStorage.getItem('products') },
 			function(res){
-				console.log(res);
+				//console.log(res);
 				// var link = 'http://hm.marcus-schonning.se/hm/app/hm_app.php?cart=' + res;
 				var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
 				$('.qr').html('').qrcode({
@@ -294,10 +294,9 @@ jQuery(function($){
 
 	}
 
-	// $(document).on('click', function(e){
-	// 	var pos = " 'X: " + e.pageX + " Y: " + e.pageY + " ' ";
-	// 	console.log(pos);
-	// });
-
 
 });
+
+
+
+
