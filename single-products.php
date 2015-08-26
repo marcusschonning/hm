@@ -25,11 +25,11 @@ if ( have_posts() ) {
 					<input type="radio" name="size" value='XL' id="xl" />
 					<label for="xl">XL</label>
 				</div>
-				<div class="price">Pris: <span><?php echo get_post_meta($post->ID, "product_price", true); ?></span>:-</div>
+				
 				<?php
 			}
-
 			?>
+			<div class="price">Pris: <span><?php echo get_post_meta($post->ID, "product_price", true); ?></span>:-</div>
 			<div class="img" imageLink="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>"></div>
 			<div class="add-to-cart">Add to cart<i class="fa fa-cart-plus"></i></div>
 		

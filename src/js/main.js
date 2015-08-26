@@ -193,7 +193,8 @@ jQuery(function($){
 	var total = 0;
 
 	$('.content').delegate('.add-to-cart', 'click', function(){
-		
+		$('.lightbox-product').remove();
+		$('.product-link img').css('transform', 'scale(1)');
 		var id = parseInt($(this).siblings('.title').attr('product-id'));
 		var name = $(this).siblings('.title').text();
 		var price = parseInt($(this).siblings('.price').children('span').text());
