@@ -12,5 +12,5 @@
 </video>
 
 
-<div class="vid-qr" style="height: 100px; width: 100px; background: url('<?php echo get_template_directory_uri() ?>/img/qr.png'); background-color: green; opacity: 0; position: absolute; transition: opacity 200ms;"></div>
+<div class="vid-qr" style="height: 100px; width: 100px; background: url('<?php echo get_template_directory_uri() ?>/img/qr.png'); background-color: green; background-size: cover; opacity: 0; position: absolute; transition: opacity 200ms;"></div>
 <?php get_footer(); ?>

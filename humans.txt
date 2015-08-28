@@ -3,11 +3,12 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Marcus Schönning -- Developer -- @mackschonning
+    Joakim Forslund -- Developer -- @booomshakalakah
 
 # THANKS
 
-    <name>
+    Mamma
 
 # TECHNOLOGY COLOPHON
 

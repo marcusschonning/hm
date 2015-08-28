@@ -2,7 +2,7 @@
 /**
  * The Header for our theme
  *
- * Displays all of the <head> section and everything up till <div id="main">
+ * Displays all of the <head> section and everything up till <div id="wrapper">
  *
  */
 
@@ -12,7 +12,6 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title><?php bloginfo('name'); ?><?php wp_title( '|', true, 'left' ); ?></title>
-		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">

@@ -2,16 +2,6 @@ jQuery(function($){
 
 	var products = [];
 	
-
-	// $('body').delegate('.product-slider','mousewheel', function(event){
-	// 	console.log(event.originalEvent.deltaX);
-	// 	var delta = event.originalEvent.deltaX;
-				
-
-	// 	//console.log($(this).children().position().left);
-	// 	return false;
-				
-	// });
 	//OM MAN KLICKAR PÅ MAN ELLER KVINNA
 	$('.male, .female').on('click', function(e){
 
@@ -41,16 +31,11 @@ jQuery(function($){
 
 			/*SCROLLLLLLLLL*/
 			$('.product-slider').scroll(function(e) {
-				//console.log($(this).children().position().left);
 				currentPosLeft = $(this).children().position().left;
-				//console.log(1);
 				if(currentPosLeft%2 == 0){
 					lastPosLeft = currentPosLeft;
-					//console.log(2);
 				}
-				//console.log('last pos:'+lastPosLeft+', currentpos:'+currentPosLeft);
 				if(lastPosLeft > currentPosLeft && sRight){
-					console.log('scroll till höger');
 					$('.dots span').toggleClass('dots-active');
 					var currentElement = $('.product-slider div').next();
 					$('.product-slider').animate({scrollLeft: $(currentElement).offset().left}, 800,function(){
@@ -63,7 +48,6 @@ jQuery(function($){
 					$('.lightbox-product').remove();
 					
 				}else if(lastPosLeft < currentPosLeft && sLeft){
-					console.log('scroll till vänster');
 					$('.dots span').toggleClass('dots-active');
 					var currentElement = $('.product-slider div').next();
 					$('.product-slider').animate({scrollLeft: -1 * $(currentElement).offset().left}, 800);
@@ -119,7 +103,6 @@ jQuery(function($){
 
 			if($(this).hasClass(category)){
 				row.append($(this).clone());
-				console.log("Moving link");
 				if(row.find("a").length>=3){
 					$(".product-slider").append(row);
 					row=$("<div class='tripplet'></div>");
@@ -178,11 +161,7 @@ jQuery(function($){
 				});
 		}
 	});
-
-	//SLICK
 	
-
-
 	
 	$('.content').delegate('.close', 'click', function(){
 		$('.lightbox-product').remove();
@@ -211,12 +190,6 @@ jQuery(function($){
 			'color': color,
 			'size': size
 		});
-		console.log(id);
-		console.log(name)
-		console.log(price);
-		console.log(color);
-		console.log(size);
-		console.log(products);
 
 		
 		var obj = JSON.stringify({ 'products': products });
@@ -236,7 +209,6 @@ jQuery(function($){
 			url,
 			{ 'json_obj': localStorage.getItem('products') },
 			function(res){
-				//console.log(res);
 				var link = 'http://hm.marcus-schonning.se/hm/app/hm_app.php?cart=' + res;
 				// var link = 'http://localhost/terminsprojekt/hm/app/hm_app.php?cart=' + res;
 				$('.qr').html('').qrcode({
@@ -255,7 +227,6 @@ jQuery(function($){
 
 			setInterval(function(){
 				var time = e.target.currentTime;
-				console.log(time); 
 			
 				switch (true) {
 				case (time > 3.8 && time < 5.8):
